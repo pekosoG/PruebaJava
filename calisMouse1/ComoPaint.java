@@ -45,7 +45,7 @@ public class ComoPaint extends JPanel {
 		JFrame frame = new JFrame("Prueba Paint");
 		ComoPaint algo= new ComoPaint();
 		frame.add(algo);
-		frame.setSize(400, 400);
+		frame.setSize(400, 400); //seguro?
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 	}
