@@ -18,8 +18,9 @@ public class ComoPaint extends JPanel {
 	int mouseX=50,mouseY=50;
 	Point orale;
 	
+	//El Constructor de la Clase
 	public ComoPaint(){
-		KeyListener elTeclado= new MyKeyListener();
+		KeyListener elTeclado= new MyKeyListener(); 
 		MouseListener elMouse= new MyMouseListener();
 		this.addMouseListener(elMouse);
 		this.addKeyListener(elTeclado);
@@ -52,15 +53,15 @@ public class ComoPaint extends JPanel {
 	public class MyKeyListener implements KeyListener{
 
 		@Override
-		public void keyPressed(KeyEvent e) {
+		public void keyPressed(KeyEvent e) { //Generamos el Listener para las teclas
 			System.out.println("keyPressed="+e.getKeyCode());
-			if(e.getKeyCode()==37)
+			if(e.getKeyCode()==37) //izaquierda
 				mouseX-=1;
-			if(e.getKeyCode()==38)
+			if(e.getKeyCode()==38)//abajo
 				mouseY-=1;
-			if(e.getKeyCode()==39)
+			if(e.getKeyCode()==39)//arriba
 				mouseX+=1;
-			if(e.getKeyCode()==40)
+			if(e.getKeyCode()==40)//derecha
 				mouseY+=1;
 			repaint();
 		}
